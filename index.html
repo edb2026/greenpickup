@@ -132,6 +132,15 @@
     max-width:15ch;
   }
   .hero-title em{font-style:italic;color:#0c3422}
+  .hero-title-wrap{position:relative;display:inline-block;max-width:100%}
+  .hero-needle{
+    position:absolute;top:-30px;right:-24px;height:190px;width:auto;
+    pointer-events:none;z-index:2;
+    filter:drop-shadow(0 16px 26px rgba(18,74,50,.4));
+  }
+  @media (min-width:768px){
+    .hero-needle{height:250px;top:-42px;right:-60px}
+  }
   .hero-sub{
     font-size:clamp(1.12rem,2.4vw,1.5rem);
     color:var(--ink-soft);margin-top:26px;max-width:34ch;font-weight:500;
@@ -410,7 +419,23 @@
           Less landfill · more giving
         </span>
 
-        <h1 class="hero-title reveal">Giving something away? We pick it up <em>fast &amp; free.</em></h1>
+        <div class="hero-title-wrap">
+          <h1 class="hero-title reveal">Giving something away? We pick it up <em>fast &amp; free.</em></h1>
+          <svg class="hero-needle" viewBox="0 0 200 460" aria-hidden="true" focusable="false">
+            <polygon points="82,392 100,392 40,456 6,456" fill="#0c3422"/>
+            <polygon points="118,392 100,392 160,456 194,456" fill="#0c3422"/>
+            <polygon points="92,392 108,392 112,456 88,456" fill="#124a32"/>
+            <line x1="24" y1="428" x2="176" y2="428" stroke="#0c3422" stroke-width="4" opacity=".55"/>
+            <polygon points="88,182 112,182 118,392 82,392" fill="#124a32"/>
+            <line x1="100" y1="188" x2="100" y2="386" stroke="#ffffff" stroke-width="2" opacity=".12"/>
+            <polygon points="62,150 138,150 128,182 72,182" fill="#0c3422"/>
+            <polygon points="50,70 150,70 138,150 62,150" fill="#124a32"/>
+            <rect x="64" y="98" width="72" height="18" rx="4" fill="#c4e66e"/>
+            <path d="M58,70 Q100,28 142,70 Z" fill="#0c3422"/>
+            <line x1="100" y1="4" x2="100" y2="46" stroke="#0c3422" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="100" cy="4" r="5" fill="#c0552c"/>
+          </svg>
+        </div>
 
         <p class="hero-sub reveal">Millions of good things end up in landfills — just because people run out of time.</p>
 
