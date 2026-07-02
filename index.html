@@ -300,6 +300,9 @@
     position:relative;z-index:1;
   }
   .ios-hint b{color:var(--lime)}
+  .ios-hint-title{margin:0 0 8px;font-weight:600}
+  .ios-hint ol{margin:0;padding-left:1.2em}
+  .ios-hint li{margin:2px 0}
 
   /* ---------- FOOTER ---------- */
   footer{padding:24px 0 40px;text-align:center;color:var(--ink-soft);font-size:1rem}
@@ -535,7 +538,12 @@
           Install app
         </button>
         <div class="ios-hint" id="iosHint">
-          To install on iPhone/iPad: tap the <b>Share</b> button, then choose <b>Add to Home Screen</b>.
+          <p class="ios-hint-title">To install the app:</p>
+          <ol>
+            <li>Tap <b>Share</b></li>
+            <li>Find and tap <b>Add to Home Screen</b></li>
+            <li>Tap <b>Done</b></li>
+          </ol>
         </div>
       </div>
     </div>
